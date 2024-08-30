@@ -1,0 +1,274 @@
+
+
+/* Custom styles for the navbar */
+.navbar {
+    border-radius: 0;
+    background: #fff;
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1em;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.navbar-toggler {
+    border: none;
+    background: #ffffff;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M5 7h20M5 15h20M5 23h20'/%3E%3C/svg%3E");
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #555;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #0056b3;
+}
+
+/* Adjustments for mobile responsiveness */
+@media (max-width: 991px) {
+    .navbar-nav {
+        margin-top: 10px;
+    }
+}
+.offer-section {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0; /* Adjust padding as needed */
+    box-sizing: border-box; /* Ensure padding is included in the total width */
+}
+
+.offer-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    padding: 0 10px; /* Add horizontal padding for spacing */
+    box-sizing: border-box; /* Include padding in the total width calculation */
+}
+
+.offer-card {
+    flex: 0 0 auto;
+    width: calc(33.3333% - 20px); /* Adjust width for 3 cards per row with space */
+    margin: 0 10px; /* Space between cards */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px; /* Set a fixed width for the cards */
+    height: 200px; /* Set a fixed height for the cards */
+}
+
+.offer-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-size: cover;
+}
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+    .offer-card {
+        width: calc(50% - 20px); /* Adjust width for 2 cards per row with space */
+        margin: 0 10px; /* Keep the spacing */
+    }
+}
+
+@media (max-width: 768px) {
+    .offer-card {
+        width: calc(100% - 20px); /* Adjust width for 1 card per row */
+        margin: 0 auto 20px auto; /* Add vertical spacing for single-column layout */
+        padding: 0 10px;
+    }
+}
+/* Ensure container has enough space */
+.categories-section {
+    padding: 3rem 0;
+}
+
+.categories-wrapper {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+}
+
+.category-card {
+    flex: 0 0 auto; /* Prevent cards from growing or shrinking */
+    width: 200px; /* Adjust the width as needed */
+    height: 150px; /* Keep the height equal to width for a square aspect ratio */
+    background-color: #fff;
+    border-radius: 0.5rem;
+    overflow-y: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* For positioning the hover effect */
+}
+
+/* Hide text inside category-card */
+.category-card h3 {
+    display: none;
+}
+
+/* Ensure images fit within the card */
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the card area without stretching */
+}
+
+/* Hover effect */
+.category-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+  /* General Styling */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2.text-center {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* General styling for product items */
+.product-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 1rem; /* Spacing below each product item */
+}
+
+/* Hover effect for product items */
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image container within product item */
+.product-item .image-container {
+    width: 100%;
+    height: 120px; /* Fixed height for consistent image size */
+    overflow: hidden;
+    border-radius: 8px 8px 0 0; /* Rounded corners on the top */
+    position: relative;
+}
+
+/* Ensure images fit the container */
+.product-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container without distortion */
+    display: block; /* Remove any extra space below the image */
+}
+
+/* Product details section */
+.product-item .details {
+    padding: 1rem; /* Add padding around product details */
+}
+
+/* Responsive design for product list */
+@media (min-width: 576px) {
+    .product-item {
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+@media (min-width: 768px) {
+    .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem; /* Space between product items */
+    }
+
+    .product-item {
+        flex: 1 1 calc(50% - 1rem); /* Two items per row on medium screens */
+    }
+}
+
+@media (min-width: 992px) {
+    .product-item {
+        flex: 1 1 calc(33.333% - 1rem); /* Three items per row on large screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .product-item {
+        flex: 1 1 calc(25% - 1rem); /* Four items per row on extra-large screens */
+    }
+}
+
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Flexbox container to hold the name and store */
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: auto;
+}
+
+/* Product name styling */
+.product-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+/* Store name styling */
+.product-store {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    margin: 0;
+}
+
+/* Quantity and unit styling */
+.product-quantity {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Fine-tuning */
+.product-details p {
+    margin: 0;
+}
