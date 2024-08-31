@@ -181,36 +181,37 @@
         const db = getDatabase(app);
 
         function renderProducts(productData, containerId) {
-            const productList = document.getElementById(containerId);
-            productList.innerHTML = ''; // Clear existing products
-            productData.forEach(product => {
-                const productDiv = document.createElement('div');
-                productDiv.className = 'col-md-3 product-item'; // Adjust class for responsive grid
-                productDiv.innerHTML = `
-                    <div class="card">
-                        <img src="${product.imageUrl || 'https://via.placeholder.com/150'}" class="card-img-top" alt="${product.name}">
-                        <div class="card-body">
-                            <h5 class="card-title">${product.name}</h5>
-                            <p class="card-text">Store: ${product.store}</p>
-                            <p class="card-text">Quantity: ${product.quantity} ${product.unit}</p>
-                            <p class="card-text">Price: ${product.price}</p>
-                          <button class="btn btn-primary">
-                          <span>Buy Now</span>
-                                <i class="fa-solid fa-money-check"></i>
-                          </button>
-                          <button class="btn btn-secondary">
-                          <span>Add to Cart</span>
-                                <i class="fa-solid fa-cart-shopping"></i>
-                          </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                `;
-                productList.appendChild(productDiv);
-            });
-        }
+    const productList = document.getElementById(containerId);
+    productList.innerHTML = ''; // Clear existing products
+
+    productData.forEach(product => {
+        // Format the price to 2 decimal places
+        const formattedPrice = product.price.toFixed(2);
+
+        const productDiv = document.createElement('div');
+        productDiv.className = 'col-md-3 product-item'; // Adjust class for responsive grid
+        productDiv.innerHTML = `
+            <div class="card">
+                <img src="${product.imageUrl || 'https://via.placeholder.com/150'}" class="card-img-top" alt="${product.name}">
+                <div class="card-body">
+                    <h5 class="card-title">${product.name}</h5>
+                    <p class="card-text">Store: ${product.store}</p>
+                    <p class="card-text">Quantity: ${product.quantity} ${product.unit}</p>
+                    <p class="card-text">Price: ₹${formattedPrice}</p>
+                    <button class="btn btn-primary">
+                        <span>Buy Now</span>
+                        <i class="fa-solid fa-money-check"></i>
+                    </button>
+                    <button class="btn btn-secondary">
+                        <span>Add to Cart</span>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                </div>
+            </div>
+        `;
+        productList.appendChild(productDiv);
+    });
+}
 
         async function loadProductsByType(type, containerId) {
             const usersRef = ref(db, 'users');
