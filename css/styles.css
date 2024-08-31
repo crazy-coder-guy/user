@@ -80,6 +80,38 @@ body {
   .offer-card:hover {
     transform: scale(1.05);
   }
+  /* CSS */
+.card-body {
+  padding: 0.5rem; /* Adjust padding to reduce space inside the card */
+}
+
+.card-title {
+  margin-bottom: 0.5rem; /* Reduce space below the title */
+}
+
+.card-text {
+  margin-bottom: 0.25rem; /* Reduce space below each text element */
+}
+
+.btn {
+  margin-top: 0.5rem; /* Add space between buttons if needed */
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 576px) {
+  .card-body {
+    padding: 0.25rem; /* Adjust padding for mobile view */
+  }
+  
+  .card-title {
+    margin-bottom: 0.25rem; /* Reduce space below the title on mobile */
+  }
+
+  .card-text {
+    margin-bottom: 0.125rem; /* Further reduce space between text elements on mobile */
+  }
+}
+
 
   /* Arrow buttons */
   .arrow-button {
