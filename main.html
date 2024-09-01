@@ -262,10 +262,6 @@
                           <p class="card-text">Store: ${product.store}</p>
                           <p class="card-text">Quantity: ${product.quantity} ${product.unit}</p>
                           <p class="card-text">Price: ₹${formattedPrice}</p>
-                          <button class="btn btn-primary">
-                              <span>Buy Now</span>
-                              <i class="fa-solid fa-money-check"></i>
-                          </button>
                          <button class="btn btn-secondary add-to-cart" onclick="addToCart('${product.name}', ${product.price}, '${product.imageUrl}', ${product.quantity}, '${product.unit}')">
                               <span>Add to Cart</span>
                               <i class="fa-solid fa-cart-shopping"></i>
