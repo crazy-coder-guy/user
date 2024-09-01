@@ -1,0 +1,45 @@
+/* General Styles */
+body {
+  font-family: "SUSE", sans-serif; /* Apply the New Amsterdam font */
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+} 
+.card-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .card-details {
+    flex: 1;
+  }
+  
+  .remove-btn {
+    margin-left: 20px;
+  }
+  
+  /* Mobile view */
+  @media (max-width: 768px) {
+    .card-content {
+      flex-direction: row;
+    }
+    .card-img {
+      width: 100px;
+      height: 100px;
+    }
+    .card-details {
+      font-size: 14px;
+    }
+    .remove-btn {
+      font-size: 14px;
+      padding: 5px;
+    }
+  }
+  
